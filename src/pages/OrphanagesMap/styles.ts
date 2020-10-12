@@ -46,9 +46,37 @@ export const Footer = styled.footer`
 `
 
 export const CreateOrphanage = styled.div`
- position: absolute;
+  position: absolute;
   right: 40px;
   bottom: 40px;
+
+  z-index: 10;
+
+  width: 64px;
+  height: 64px;
+  background: #15c3d6;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+
+  > a {
+    display: flex;
+    align-items: center;
+  }
+
+  &&:hover{
+    background: #17d6eb;
+  }
+`
+
+export const ChangeTheme = styled.div`
+  position: absolute;
+  right: 40px;
+  top: 40px;
 
   z-index: 10;
 
@@ -67,3 +95,4 @@ export const CreateOrphanage = styled.div`
     background: #17d6eb;
   }
 `
+
