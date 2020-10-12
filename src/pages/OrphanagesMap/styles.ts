@@ -1,13 +1,19 @@
-#page-map{
+import styled from 'styled-components';
+
+
+export const PageMapContainer = styled.div`
   width: 100vw;
   height: 100vh;
 
   position: relative;
   display: flex;
-}
 
-
-#page-map aside{
+  //Div do mapa
+  .leaflet-container {
+    z-index: 5;
+  }
+`
+export const Aside = styled.aside`
   width: 440px;
   background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
   padding: 80px;
@@ -15,36 +21,32 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-#page-map aside h2{
-  font-size: 40px;
+  > h2 {
+    font-size: 40px;
   font-weight: 800;
   line-height: 42px;
   margin-top: 64px;
-}
+  }
 
-#page-map aside p {
-  line-height: 28px;
-  margin-top: 24px;
-}
+  > p {
+    line-height: 28px;
+    margin-top: 24px;
+  }
+`
 
-#page-map aside footer {
+export const Footer = styled.footer`
    display: flex;
    flex-direction: column;
    line-height: 24px;
-}
 
-#page-map aside footer strong {
-  font-weight: 800;
-}
+   > strong{
+    font-weight: 800;
+   }
+`
 
-#page-map .leaflet-container{
-  z-index: 5;
-}
-
-#page-map .create-orphanage{
-  position: absolute;
+export const CreateOrphanage = styled.div`
+ position: absolute;
   right: 40px;
   bottom: 40px;
 
@@ -61,8 +63,7 @@
 
   transition: background-color 0.2s;
 
-}
-
-#page-map .create-orphanage:hover{
-  background: #17d6eb;
-}
+  &&:hover{
+    background: #17d6eb;
+  }
+`

@@ -1,4 +1,8 @@
-#page-landing {
+import styled from 'styled-components';
+import landingImg from '../../assets/images/landing.svg';
+
+
+export const LandingContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
@@ -7,11 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+`
 
-
-#page-landing .content-wrapper{
-  position: relative;
+export const ContentWrapper = styled.div`
+position: relative;
   width: 100%;
   max-width: 1100px;
 
@@ -23,30 +26,27 @@
   flex-direction: column;
   justify-content: space-between;
 
-  background: url('../../assets/images/landing.svg') no-repeat 80% center;
+  background: url(${landingImg}) no-repeat 80% center;
   background-size: contain;
+`
 
-}
-
-#page-landing .content-wrapper main {
+export const Main = styled.main`
   max-width: 350px;
-}
 
+  >h1 {
+    font-size: 76px;
+    font-weight: 900px;
+    line-height: 60px;
+  }
 
-#page-landing .content-wrapper main h1{
-  font-size: 76px;
-  font-weight: 900px;
-  line-height: 60px;
-}
+  >p {
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+`
 
-#page-landing .content-wrapper main p{
-  margin-top: 40px;
-  font-size: 24px;
-  line-height: 24px;
-}
-
-
-.content-wrapper .location {
+export const LocationContainer = styled.div`
   position: absolute;
   right: 0;
   top:0;
@@ -58,14 +58,14 @@
   flex-direction: column;
 
   text-align: right;
-}
 
-.content-wrapper .location strong {
-  font-weight: 800;
-}
+  >strong{
+    font-weight: 800;
+  }
+`
 
-.content-wrapper .enter-app{
-  position: absolute;
+export const EnterAppButton = styled.div`
+ position: absolute;
   right: 0;
   bottom:0;
 
@@ -79,8 +79,8 @@
   justify-content: center;
 
   transition: background-color 0.2s;
-}
 
-.content-wrapper .enter-app:hover{
-  background: #96FEFF;
-}
+  &&:hover{
+    background: #96FEFF;
+  }
+`

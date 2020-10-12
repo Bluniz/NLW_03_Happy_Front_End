@@ -6,26 +6,26 @@ import {Map, TileLayer} from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
-import './styles.css'
+import {PageMapContainer, Aside, Footer, CreateOrphanage} from './styles'
 import mapMarkerImg from '../../assets/images/map-marker.svg';
 
 
 function OrphanagesMap(){
 
   return(
-    <div id="page-map">
-      <aside>
+    <PageMapContainer>
+      <Aside>
         <header>
           <img src={mapMarkerImg} alt="logo"/>
           <h2>Escolha um orfanato no mapa</h2>
           <p>Muitas crianças estão esperando a sua visita :)</p>
         </header>
           
-        <footer>
+        <Footer>
           <strong>Santo Amaro</strong>
           <span>Bahia</span>
-        </footer>
-      </aside>
+        </Footer>
+      </Aside>
 
       <Map
        center={[-12.5461067,-38.7106865]}
@@ -36,10 +36,12 @@ function OrphanagesMap(){
 
         </Map>
       
-      <Link to="" className="create-orphanage">
+      <CreateOrphanage>
+      <Link to="" >
         <FiPlus size={32} color="fff" />
         </Link>
-    </div>
+        </CreateOrphanage>
+    </PageMapContainer>
   )
 
 }
